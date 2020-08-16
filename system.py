@@ -34,7 +34,9 @@ def connect_to_network():
             current_try += 1
 
     if not sta_if.isconnected():
-        raise FailedToConnectToNetworkException(const('Unable to connect to any available network'))
+        raise FailedToConnectToNetworkException(
+            'Unable to connect to any available network'
+        )
 
 
 class SystemManager:
